@@ -1,18 +1,17 @@
 <html>
-
     <head>
         <title>Demo</title>
     </head>
     <body>
-        <button>Select random image</button>
+        <button id="selectBtn">Select random image</button>
     </body>
     <script>
-        fetch('http://example.com/movies.json')
+        fetch('http://backend/api/data')
         .then(function(response) {
             return response.json();
         })
         .then(function(myJson) {
-            console.log(JSON.stringify(myJson));
+            console.log(myJson);
         });
     </script>
 </html>
